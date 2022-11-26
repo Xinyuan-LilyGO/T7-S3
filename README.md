@@ -2,7 +2,7 @@
 
 ## **English | [中文](./README_CN.MD)**
 
-<h3 align = "left">Quick start:</h3>
+## Quick start
 
 **USE PlatformIO**
 
@@ -10,7 +10,6 @@
 2. Search for the PlatformIO plug-in in the VSCODE extension and install it.
 3. After the installation is complete and the reload is completed, there will be a small house icon in the lower left corner. Click to display the Platformio IDE home page
 4. Go to file - > Open folder - > Select the T7-S3 folder and click the (√) symbol in the lower left corner to compile (→) for upload.
-
 
 **USE Arduino IDE**
 
@@ -20,24 +19,22 @@
 
 **USE Micropython**
 
-1. [Download and upload the firmware](https://micropython.org/download/GENERIC_S3_SPIRAM/)
+1. [Download and upload the firmware](https://github.com/Xinyuan-LilyGO/T7-S3/issues/1)
 
+## Specification
 
-<h3 align = "left">Product 📷:</h3>
+![](assets/image/t7-s3_v1.1_specification.jpg)
+
+## Pinout
+
+![](assets/image/t7-s3_v1.1_pinmap.jpg)
+
+## Sleep Test
+
+![](assets/image/t7-s3_v1.1_sleep_test.jpg)
+
+## Product 📷
 
 | Product |                           Product  Link                            |
 | :-----: | :----------------------------------------------------------------: |
 |  T7-S3  | [AliExpress](https://www.aliexpress.us/item/3256804591247074.html) |
-
-## Pinout
-
-![](image/T7-S3.jpg)
-
-![](/image/image2.jpg)
-
-## Sleep
-
-![](image/sleep.jpg)
-
-
-
