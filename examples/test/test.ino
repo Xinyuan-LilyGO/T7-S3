@@ -71,8 +71,8 @@ void loop()
     if (millis() - blinkMillis > 1000) {
         blinkMillis = millis();
         Voltage = (readADC_Cal(analogRead(BAT_ADC))) * 2;
-        Serial1.printf("%.2fV", Voltage / 1000.0); // Print Voltage (in V)
-        Serial1.println();
+        Serial.printf("%.2fV", Voltage / 1000.0); // Print Voltage (in V)
+        Serial.println();
     }
 
     if (readkey()) {
