@@ -5,10 +5,8 @@
 #define TIME_TO_SLEEP  20        /* Time ESP32 will go to sleep (in seconds) */
 
 #include <WiFi.h>
-#include "esp_adc_cal.h"
 #include <Arduino.h>
 float Voltage = 0.0;
-uint32_t readADC_Cal(int ADC_Raw);
 uint32_t        blinkMillis = 0;
 RTC_DATA_ATTR int bootCount = 0;
 
@@ -70,7 +68,7 @@ void loop()
 
     if (millis() - blinkMillis > 1000) {
         blinkMillis = millis();
-        Voltage = (readADC_Cal(analogRead(BAT_ADC))) * 2;
+        Voltage = (analogReadMilliVolts(BAT_ADC)) * 2;
         Serial.printf("%.2fV", Voltage / 1000.0); // Print Voltage (in V)
         Serial.println();
     }
@@ -81,14 +79,3 @@ void loop()
     }
 
 }
-
-uint32_t readADC_Cal(int ADC_Raw)
-{
-    esp_adc_cal_characteristics_t adc_chars;
-
-    esp_adc_cal_characterize(ADC_UNIT_1, ADC_ATTEN_DB_11, ADC_WIDTH_BIT_12, 1100, &adc_chars);
-    return (esp_adc_cal_raw_to_voltage(ADC_Raw, &adc_chars));
-}
-
-
-
